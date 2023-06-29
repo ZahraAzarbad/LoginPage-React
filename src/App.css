@@ -1,38 +1,243 @@
-.App {
-  text-align: center;
+
+*,*::before,*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#root{
+  width: 100%;
+  height: 100%;
+  background-color: #F6CFE2
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body{
+  width: 100vw;
+  height: 100vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+input{
+  outline: 0;
+  border: 0;
+}
+
+svg{
+  fill: gray;
+}
+
+.app{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+
+
+.form{
+  background-color: #FCECF3;
+  width: 50%;
+  max-width: 400px;
+  min-width: 300px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 26px;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 6px 8px rgba(107, 107, 107, 0.205);
+}
+
+.form button:last-child{
+  margin-top: 12px;
+}
+
+
+.btn{
+  border: 0;
+  border-radius: 4px;
+  padding-block: 10px;
+  cursor: pointer;
+  transition: all .8 ease-in;
+  outline: 0;
+}
+
+
+
+.active-btn{
+  background-color: rgb(139, 27, 243);
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.active-btn:hover{
+  background-color: rgb(139, 27, 243);
+}
+.deactive-btn{
+  background-color: #FCECF3;
+  color: rgb(139, 27, 243);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-input{
+  background-color: white;
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 10px;
+
+  border-radius: 2px;
 }
+
+.form-input svg{
+  position: absolute;
+  left: 10px;
+}
+
+.form-input input {
+ height: 100%;
+ width: 100%;
+ border-radius: 2px;
+ padding: 10px;
+ padding-left: 30px;
+ border: 1px solid rgb(255, 255, 255);
+
+}
+.form-input input:invalid[focused="true"]{
+  border: 1px solid rgb(245, 71, 71);
+}
+.form-input  small {
+  color: rgb(245, 71, 71);
+  position: absolute;
+  bottom: -20px;
+  left: 5px;
+  display: none;
+}
+
+input:invalid[focused="true"] + small  {
+  display: block;
+}
+
+.btns-wrapper{
+  width: 70%;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-inline: auto;
+ 
+}
+
+.btns-wrapper .btn{
+    flex: 1;
+    margin: 0 !important;
+
+}
+
+
+
+
+
+/* *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  width: 100vw;
+  height: 100vh;
+}
+#root{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+align-items: center;
+background-color: #F6CFE2;
+}
+
+.form{
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #FCECF3;
+  padding: 20px 15px;
+  gap: 15px;
+  border-radius: 10px;
+}
+.buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.signin-btn{
+  border: 0;
+  background-color:#FCECF3 ;
+  color: #71499C;
+  font-weight: bold;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+.signup-btn{
+  border: 0;
+  background-color:#71499C ;
+  color: white;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+.sign-up{
+width: 100%;
+border: 0;
+background-color:#71499C ;
+color: white;
+border-radius: 5px;
+padding: 10px 15px;
+cursor: pointer;
+}
+.inputs-container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.inputs{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+input{
+  width: 80%;
+  border: 0;
+  outline: 0;
+}
+.input{
+  width: 100%;
+  display: flex;
+  gap: 8px;
+  color: gray;
+  border: 0;
+  padding: 10px 15px;
+  background-color: white;
+  border-radius: 3px;
+  
+}
+p{
+  color: red;
+  font-size: 12px;
+}
+.email-error{
+  display:none;
+}
+.userName-error{
+  display:none;
+}
+.password-error{
+  display: none;
+}
+.re-enter-error{
+  display: none;
+} */
